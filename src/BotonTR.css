@@ -1,0 +1,37 @@
+.tarea {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarea span {
+    flex-grow: 1;
+    margin-right: 10px;
+    word-break: break-word;
+}
+
+.tarea button {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.tarea button:nth-child(2) {
+    background-color: #2196F3;
+}
+
+.tarea button:nth-child(2):hover {
+    background-color: #1976D2;
+}
+
+.tarea button:last-child {
+    background-color: #f44336;
+}
+
+.tarea button:last-child:hover {
+    background-color: #d32f2f;
+}
