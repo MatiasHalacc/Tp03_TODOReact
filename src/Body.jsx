@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import BarraAgregar from './BarraAgregar'
+import BarraAgregar from './BarraAgregar.jsx'
 import './BarraAgregar.css'
-import BotonTR from './BotonTR'
+import BotonTR from './BotonTR.jsx'
+
 import "./BotonTR.css"
 import Listado from './Listado'
 export default function Body() {
@@ -10,7 +11,7 @@ export default function Body() {
   return (
     <>
         <BarraAgregar lista={lista} setLista={setLista} />
-        <BotonTR />
+        <BotonTR lista={lista}/>
         <Listado listado={lista} setlistado={setLista} />
     </>
   )

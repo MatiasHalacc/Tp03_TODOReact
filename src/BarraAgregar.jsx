@@ -9,6 +9,7 @@ export default function BarraAgregar({lista,setLista}) {
           Nombre : NombreTarea,
           Resuelto : false,
           FechaCreacion: new Date().toLocaleString(), 
+          FechaCreacionS: new Date(), 
           FechaTachado: null,
           TimestampTachado: null
       }      
