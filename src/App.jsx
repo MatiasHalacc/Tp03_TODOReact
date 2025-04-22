@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React from 'react'
 import "./Body.css"
 import Body from './Body'
 function App() {

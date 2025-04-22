@@ -5,13 +5,13 @@ import BotonTR from './BotonTR'
 import "./BotonTR.css"
 import Listado from './Listado'
 export default function Body() {
-    const [lista, setLista] = useState([{id:1,nombre:'martin'}]);
+    const [lista, setLista] = useState([]);
 
   return (
     <>
         <BarraAgregar lista={lista} setLista={setLista} />
         <BotonTR />
-        <Listado listado={lista} />
+        <Listado listado={lista} setlistado={setLista} />
     </>
   )
 }

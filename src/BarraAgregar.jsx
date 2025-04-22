@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function BarraAgregar({lista,setLista}) {    
 
@@ -11,9 +11,8 @@ export default function BarraAgregar({lista,setLista}) {
           FechaCreacion: new Date().toLocaleString(), 
           FechaTachado: null,
           TimestampTachado: null
-      }
-            
-      setLista(...lista,tarea);      
+      }      
+      setLista([...lista,tarea]);      
   }
   return (
     <>

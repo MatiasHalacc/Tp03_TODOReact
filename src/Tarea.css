@@ -1,0 +1,7 @@
+.Tachar{
+    text-decoration: line-through;
+}
+
+.item{
+    display: flex;
+}
