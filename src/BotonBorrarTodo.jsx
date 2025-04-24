@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-export default function BotonBorrarTodo({setLista}) {
+export default function BotonBorrarTodo({setLista,setTareaRapida}) {  
   return (
     <>
-        <button onClick={() => setLista([])}>Borrar todas las tareas</button>
+        <button onClick={() => {setLista([]); setTareaRapida(null);}}>Borrar todas las tareas</button>
     </>
   )
 }

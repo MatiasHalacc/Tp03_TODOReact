@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function Tarea({listado, setlistado, i}) {
+export default function Tarea({listado, setlistado, i, setTareaRapida}) {
   const item = listado[i];
 
   const chequearTarea = () => {
+    setTareaRapida(null);
     let aux = [...listado];
     aux[i].Resuelto = !item.Resuelto;
     aux[i].FechaTachado = aux[i].Resuelto ? new Date() : null;

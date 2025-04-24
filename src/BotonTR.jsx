@@ -1,8 +1,5 @@
-import React, { useState } from 'react'
-
-export default function BotonTR({lista}) {
+export default function BotonTR({lista, setTareaRapida, tareaRapida}) {
   let tiempoMasRapido = Number.MAX_VALUE;
-  const [tareaRapida, setTareaRapida] = useState(null);
   const CalcTareaRapida = () => {
     for (let i = 0; i < lista.length; i++) {
         if (lista[i].TimestampTachado === null) { continue; }
@@ -14,10 +11,9 @@ export default function BotonTR({lista}) {
     }
   }
 
-  return tareaRapida != null && lista.length != 0 ? (
-    
+  return tareaRapida != null ? (
     <>
-        <button onClick={CalcTareaRapida}>Tarea hecha mas rapida</button>
+        <button onClick={() => {tareaRapida = CalcTareaRapida()}}>Tarea hecha mas rapida</button>
         <div>
             <p><strong>Tarea más rápida en ser tachada:</strong></p>
             <p>Nombre:{tareaRapida.Nombre}</p>

@@ -8,17 +8,18 @@ import Listado from './Listado'
 import BotonBorrarTodo from './BotonBorrarTodo.jsx'
 export default function Body() {
     const [lista, setLista] = useState([]);
+    let [tareaRapida, setTareaRapida] = useState(null);
 
   return (
     <>
     <div>
-        <BarraAgregar lista={lista} setLista={setLista} />
+        <BarraAgregar lista={lista} setLista={setLista} tareaRapida={tareaRapida} setTareaRapida={setTareaRapida} />
     </div>
     <div>
-        <BotonTR lista={lista}/>
-        <BotonBorrarTodo setLista={setLista}/>
+        <BotonTR lista={lista} tareaRapida={tareaRapida} setTareaRapida={setTareaRapida} />
+        <BotonBorrarTodo setLista={setLista} setTareaRapida={setTareaRapida}/>
     </div>
-        <Listado listado={lista} setlistado={setLista} />
+        <Listado listado={lista} setlistado={setLista} setTareaRapida={setTareaRapida}/>
     </>
   )
 }

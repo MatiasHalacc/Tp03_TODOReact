@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-export default function BarraAgregar({lista,setLista}) {    
+export default function BarraAgregar({lista,setLista,setTareaRapida}) {    
+  useEffect(
+    () => {setTareaRapida(null);}, []
+  )
 
-  function AgregarTarea(){      
+  function AgregarTarea(){
       let NombreTarea = document.getElementById("IngresarTODO").value;
       if(!NombreTarea) return;
       let tarea = {
