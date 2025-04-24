@@ -4,12 +4,13 @@ export default function BarraAgregar({lista,setLista}) {
 
   function AgregarTarea(){      
       let NombreTarea = document.getElementById("IngresarTODO").value;
+      if(!NombreTarea) return;
       let tarea = {
           id : lista.length,
           Nombre : NombreTarea,
           Resuelto : false,
-          FechaCreacion: new Date().toLocaleString(), 
-          FechaCreacionS: new Date(), 
+          FechaCreacionS: new Date().toLocaleString(), 
+          FechaCreacion: new Date(), 
           FechaTachado: null,
           TimestampTachado: null
       }      

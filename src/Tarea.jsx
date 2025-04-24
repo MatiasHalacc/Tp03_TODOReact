@@ -7,6 +7,7 @@ export default function Tarea({listado, setlistado, i}) {
     let aux = [...listado];
     aux[i].Resuelto = !item.Resuelto;
     aux[i].FechaTachado = aux[i].Resuelto ? new Date() : null;
+    aux[i].FechaTachadoS = aux[i].FechaTachado != null ? aux[i].FechaTachado.toLocaleString() : null;
     aux[i].TimestampTachado = aux[i].FechaTachado != null ? aux[i].FechaTachado - aux[i].FechaCreacion : null;
     setlistado(aux);
   }

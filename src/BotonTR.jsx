@@ -13,15 +13,16 @@ export default function BotonTR({lista}) {
         }
     }
   }
-  return tareaRapida != null ? (
+
+  return tareaRapida != null && lista.length != 0 ? (
     
     <>
         <button onClick={CalcTareaRapida}>Tarea hecha mas rapida</button>
         <div>
             <p><strong>Tarea más rápida en ser tachada:</strong></p>
             <p>Nombre:{tareaRapida.Nombre}</p>
-            <p>Fecha de creación: ${tareaRapida.FechaCreacionS}</p>
-            <p>Fecha de tachado: ${tareaRapida.FechaTachado}</p>
+            <p>Fecha de creación: {tareaRapida.FechaCreacionS}</p>
+            <p>Fecha de tachado: {tareaRapida.FechaTachadoS}</p>
         </div>
     </>
   ) : (
